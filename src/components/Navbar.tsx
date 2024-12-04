@@ -11,7 +11,7 @@ const Navbar = () => {
       >
         <CgGym className="text-5xl" />
 
-        <div className="flex flex-col text-2xl font-light font-mono">
+        <div className="flex flex-col text-start text-2xl font-light font-mono">
           <h1>WORKOUT</h1>
           <h1 className="font-light font-mono">BUDDY</h1>
         </div>
@@ -20,10 +20,10 @@ const Navbar = () => {
       <div className="flex gap-8 text-lg">
         <Link
           to="/"
-          className="flex justify-center items-center gap-2 hover:text-blue-200 font-bold"
+          className="flex justify-center items-start gap-2 hover:text-blue-200 font-semibold"
         >
-          HOME
-          <IoHome />
+          <span>HOME</span>
+          <IoHome className="text-xl mt-0.5" />
         </Link>
       </div>
     </div>

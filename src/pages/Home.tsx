@@ -4,7 +4,7 @@ import catBG from "../assets/GymCat.jpg";
 
 const Home = () => {
   const footerItems = [
-    { label: "Maximize", value: "Health" },
+    { label: "Health", value: "Maximize" },
     { label: "Exercises", value: "Unlimited" },
     { label: "Accordingly", value: "Plan" },
   ];
