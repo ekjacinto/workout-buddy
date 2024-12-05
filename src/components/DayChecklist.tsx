@@ -5,7 +5,15 @@ type DayChecklistProps = {
 };
 
 const DayChecklist = ({ onDaysSelected }: DayChecklistProps) => {
-  const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const daysOfWeek = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
   const [selectedDays, setSelectedDays] = useState<string[]>([]);
 
   const toggleDay = (day: string) => {
@@ -43,4 +51,4 @@ const DayChecklist = ({ onDaysSelected }: DayChecklistProps) => {
   );
 };
 
-export default DayChecklist
+export default DayChecklist;

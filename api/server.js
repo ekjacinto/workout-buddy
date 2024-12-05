@@ -28,9 +28,17 @@ app.post("/api", async (req, res) => {
     const response = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [
-        { role: "system", content: "You are a helpful exercise assistant recommending workout splits." },
-        { role: "user", content: `
-          Create a workout plan based on the following input: ${JSON.stringify(generativeInput)}.
+        {
+          role: "system",
+          content:
+            "You are a helpful exercise assistant recommending workout splits.",
+        },
+        {
+          role: "user",
+          content: `
+          Create a workout plan based on the following input: ${JSON.stringify(
+            generativeInput
+          )}.
           
           Example Format 1 With Bodybuilding Program and Monday as Days Chosen:
           Monday - Full Body:
@@ -75,7 +83,7 @@ app.post("/api", async (req, res) => {
           4. Leg Extensions - 3 sets, 8 reps
 
           Do not include any additional details such as an overview or summary. Just list the exercises for each day following the example format above.
-        `
+        `,
         },
       ],
       temperature: 1,

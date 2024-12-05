@@ -10,7 +10,8 @@ const Home = () => {
   ];
 
   return (
-    <main className="flex flex-col justify-center items-center min-h-[95vh] bg-black text-white overflow-hidden gap-24 bg-cover"
+    <main
+      className="flex flex-col justify-center items-center min-h-[95vh] bg-black text-white overflow-hidden gap-24 bg-cover"
       style={{ backgroundImage: `url(${catBG})` }}
     >
       <section className="flex flex-col items-center w-full text-center gap-6 p-8">
@@ -28,9 +29,7 @@ const Home = () => {
         <p className="text-xl font-thin font-sans">
           Create your own workout routines and track your progress,
           <br />
-          <span className="italic">
-            With a single prompt.
-          </span>
+          <span className="italic">With a single prompt.</span>
         </p>
         <Link to="/intro">
           <button className="w-48 h-12 bg-blue-500 text-xl font-bold rounded-md transition-transform hover:bg-indigo-500 hover:scale-110">

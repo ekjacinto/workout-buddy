@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     document.title = "Workout Buddy";
   }, []);
-  
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -22,7 +22,7 @@ function App() {
         </Routes>
       </div>
     </div>
-  )
+  );
 }
 
 export default App;

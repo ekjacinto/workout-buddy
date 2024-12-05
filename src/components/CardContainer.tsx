@@ -29,7 +29,9 @@ const CardContainer: React.FC<CardContainerProps> = ({
           onClick={() => onCardClick(card.imageName)}
           imageName={card.imageName}
           image={card.image}
-          className={`${fadeInCards ? "fade-in" : ""} ${fadeOutCards ? "fade-out" : ""}`}
+          className={`${fadeInCards ? "fade-in" : ""} ${
+            fadeOutCards ? "fade-out" : ""
+          }`}
         />
       ))}
     </div>
