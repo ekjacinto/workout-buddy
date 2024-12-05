@@ -5,6 +5,8 @@
   import CardContainer from "../components/CardContainer";
   import DayChecklist from "../components/DayChecklist";
 
+  type GenerativeInputType = string | { question: string; answer: string[] };
+
   const IntroPage = () => {
     const [showQuestions, setShowQuestions] = useState<boolean>(false);
     const [currentArrayPos, setCurrentArrayPos] = useState<number>(0);
@@ -12,7 +14,7 @@
     const [fadeOutCards, setFadeOutCards] = useState<boolean>(false);
     const [isTypingPaused, setIsTypingPaused] = useState<boolean>(true);
     const [showChecklist, setShowChecklist] = useState<boolean>(false);
-    const [generativeInput, setGenerativeInput] = useState<any[]>([]);
+    const [generativeInput, setGenerativeInput] = useState<GenerativeInputType[]>([]);
     const [isGeneratingPlan, setIsGeneratingPlan] = useState<boolean>(false);
     const typedRef = useRef<Typed | null>(null);
 
@@ -21,7 +23,7 @@
     const INTRODUCTION = [
       "Welcome to Workout Buddy!",
       "With a single prompt...",
-      "Create your own workout routines and track your progress.",
+      "Create your own workout routines here.",
       "",
     ];
 
@@ -118,7 +120,7 @@
           navigate("/plan", {
             state: { generativeInput },
           });
-        }, 3000);
+        }, 3500);
       }
     }, [isGeneratingPlan, navigate, generativeInput]);
 

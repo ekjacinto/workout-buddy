@@ -19,7 +19,7 @@ const Home = () => {
           Exercise{" "}
           <ReactTyped
             className="font-sans font-light"
-            strings={["Freely", "Efficiently", "Safely", "Consistently"]}
+            strings={["Freely", "Efficiently", "Safely", "Accordingly"]}
             typeSpeed={120}
             backSpeed={140}
             loop
