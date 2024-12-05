@@ -25,6 +25,15 @@ html, body, #root {
   animation: textFadeOut 1s forwards;
 }
 
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes fadeIn {
   to {
     opacity: 1;

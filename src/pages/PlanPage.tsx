@@ -70,7 +70,8 @@ const PlanPage = () => {
           const workoutType = dayMatch[2];
 
           const exercises: Exercise[] = [];
-          const exerciseRegex = /\d+\.\s([\w\s]+)\s-\s(\d+)\ssets,\s([\d]+|\w+\s\w+)/g;
+          const exerciseRegex =
+            /\d+\.\s([\w\s]+)\s-\s(\d+)\ssets,\s([\d]+|\w+\s\w+)/g;
           let match: RegExpExecArray | null;
 
           while ((match = exerciseRegex.exec(daySection)) !== null) {
@@ -91,28 +92,39 @@ const PlanPage = () => {
     });
     return parsedPlan;
   };
-  
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#010409] text-white font-open">
       <h1 className="text-5xl font-bold mb-4">Your Workout Plan:</h1>
-      <div className="w-[48rem] p-4 bg-gray-800 rounded-lg shadow-md">
+      <div className="w-[48rem] max-h-[70vh] p-4 bg-[#131414] rounded-lg shadow-md overflow-y-auto">
         {isLoading ? (
-          <pre className="text-4xl whitespace-pre-wrap">Generating your workout plan...</pre>
+          <pre className="text-4xl whitespace-pre-wrap">
+            Generating your workout plan...
+          </pre>
         ) : workoutPlan && workoutPlan.length > 0 ? (
-          workoutPlan.map((day, index) => (
-            <div key={index} className="mb-4">
-              <h2 className="text-xl font-sans italic font-semibold">{`${day.day}: ${day.workoutType}`}</h2>
-              <div className="pl-5">
-                {day.exercises.map((exercise, idx) => (
-                  <p className="font-open font-thin" key={idx}>
-                    {`${exercise.exercise}:\n ${exercise.sets} sets, ${exercise.reps} reps`}
-                  </p>
-                ))}
+          <div className="flex flex-col justify-between space-y-6">
+            {workoutPlan.map((day, index) => (
+              <div
+                key={index}
+                className="flex flex-col p-4 bg-[#28282a] rounded-lg shadow-sm"
+              >
+                <h2 className="text-xl font-sans italic font-semibold">
+                  {`${day.day}: ${day.workoutType}`}
+                </h2>
+                <div className="flex flex-col pl-5">
+                  {day.exercises.map((exercise, idx) => (
+                    <p className="font-open font-thin" key={idx}>
+                      {`${exercise.exercise}: ${exercise.sets} sets, ${exercise.reps} reps`}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))
+            ))}
+          </div>
         ) : (
-          <pre className="whitespace-pre-wrap">No input provided or failed to fetch the workout plan.</pre>
+          <pre className="whitespace-pre-wrap">
+            No input provided or failed to fetch the workout plan.
+          </pre>
         )}
       </div>
     </div>
