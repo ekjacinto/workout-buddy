@@ -1,11 +1,16 @@
+import { useEffect } from "react";
 import { Route, Routes } from "react-router";
-import "./App.css";
 import Home from "./pages/Home";
 import IntroPage from "./pages/IntroPage";
 import PlanPage from "./pages/PlanPage";
 import Navbar from "./components/Navbar";
+import "./App.css";
 
 function App() {
+  useEffect(() => {
+    document.title = "Workout Buddy";
+  }, []);
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
