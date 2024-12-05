@@ -1,12 +1,11 @@
 interface CardProps {
   onClick?: () => void;
   imageName: string;
-  imageDesc: string;
   image: string | undefined;
   className?: string;
 }
 
-const Card = ({ onClick, imageName, imageDesc, image, className }: CardProps) => {
+const Card = ({ onClick, imageName, image, className }: CardProps) => {
   return (
     <main
       onClick={onClick}

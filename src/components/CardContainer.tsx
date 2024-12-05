@@ -16,9 +16,9 @@ const CardContainer: React.FC<CardContainerProps> = ({
   onCardClick,
 }) => {
   const cardData = [
-    { imageName: "BodyBuilding", imageDesc: "BodyBuilding description", image: BodyBuildingCat },
-    { imageName: "Powerlifting", imageDesc: "Powerlifting description", image: PowerliftingCat },
-    { imageName: "Calisthenics", imageDesc: "Calisthenics description", image: CalisthenicsCat },
+    { imageName: "BodyBuilding", image: BodyBuildingCat },
+    { imageName: "Powerlifting", image: PowerliftingCat },
+    { imageName: "Calisthenics", image: CalisthenicsCat },
   ];
 
   return (
@@ -28,7 +28,6 @@ const CardContainer: React.FC<CardContainerProps> = ({
           key={index}
           onClick={() => onCardClick(card.imageName)}
           imageName={card.imageName}
-          imageDesc={card.imageDesc}
           image={card.image}
           className={`${fadeInCards ? "fade-in" : ""} ${fadeOutCards ? "fade-out" : ""}`}
         />
