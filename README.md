@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+<div align="center">
+  <h1 align="center">Workout Buddy<h1>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
+  </a>
+  <a href="https://nodejs.org/en"><img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></a>
+  <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white">
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"></a>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+An AI-powered web application designed to help with personal fitness planning and management
 
-Currently, two official plugins are available:
+<div align="center">
+<img src="https://imgur.com/a/yYBGrug.png" align="center" alt="Display Sample" width="720">
+</div><br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Setup / Installation
+1. Install [Node.js](https://nodejs.org/en/download) *(preferably version >= **20.11.0**)* <br>
+   *Note: NPM should install with Node.js (preferably version >= **10.6.0**)*
 
-## Expanding the ESLint configuration
+2. Get an API key from [OpenAI](https://platform.openai.com/docs/overview) by making an account   and creating one in the dashboard
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. Open the project root directory within the command line
 
-- Configure the top-level `parserOptions` property like this:
+4. While inside the project root directory, install all the required dependecies with `npm i`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+5. Change directories to the api directory and install all the required dependecies for the backend with `npm i`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+6. Launch Workout Buddy on your localhost with `npm run dev` on two separate terminals: (1) in the root directory and (1) in the api directory.
