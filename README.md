@@ -12,7 +12,7 @@
 An AI-powered web application designed to help with personal fitness planning and management
 
 <div align="center">
-<img src="https://imgur.com/a/yYBGrug.png" align="center" alt="Display Sample" width="720">
+<img src="https://imgur.com/Rf9Xg6W.png" align="center" alt="Display Sample" width="720">
 </div><br>
 
 # Setup / Installation
