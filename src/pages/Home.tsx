@@ -32,7 +32,7 @@ const Home = () => {
             With a single prompt.
           </span>
         </p>
-        <Link to="/plan">
+        <Link to="/intro">
           <button className="w-48 h-12 bg-blue-500 text-xl font-bold rounded-md transition-transform hover:bg-indigo-500 hover:scale-110">
             Get Started
           </button>
